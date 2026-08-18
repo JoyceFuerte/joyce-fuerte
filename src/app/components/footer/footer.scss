@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 0 34px;
+    color: var(--bone);
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}

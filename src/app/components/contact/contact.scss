@@ -1,0 +1,58 @@
+.contact {
+    margin: 0 0 52px;
+    background: var(--white);
+    color: var(--ink);
+    border-radius: 30px;
+    padding: clamp(36px, 6vw, 72px);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::after {
+    content: "JF";
+    position: absolute;
+    right: -10px;
+    bottom: -38px;
+    font: 200px Georgia, serif;
+    color: rgba(101, 100, 73, .14);
+    letter-spacing: -.14em;
+}
+
+.contact h2 {
+    max-width: 680px;
+    margin: 18px 0 42px;
+    font: clamp(48px, 7vw, 91px)/.88 Georgia, serif;
+    letter-spacing: -.07em;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-links a {
+    padding: 14px 17px;
+    border: 1px solid var(--olive);
+    border-radius: 99px;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    transition: .2s ease;
+}
+
+.contact-links a:first-child {
+    background: var(--ink);
+    color: var(--white);
+    border-color: var(--ink);
+}
+
+.contact-links a:hover {
+    background: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+}

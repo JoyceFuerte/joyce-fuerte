@@ -1,0 +1,140 @@
+.hero {
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 42px;
+    align-items: center;
+    padding: 88px 0 70px;
+}
+
+.hero h1 {
+    margin: 18px 0 26px;
+    font: clamp(54px, 8vw, 118px)/.86 Georgia, serif;
+    letter-spacing: -.075em;
+    max-width: 850px;
+}
+
+.hero h1 em {
+    color: var(--bone);
+    font-weight: normal;
+}
+
+.hero-copy {
+    max-width: 470px;
+    color: var(--bone);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.hero-foot {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--bone);
+    font-size: 11px;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+
+.hero-foot span {
+    display: block;
+    width: 68px;
+    height: 1px;
+    background: var(--bone);
+}
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--bone);
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: var(--olive);
+    z-index: -1;
+    transition: all 1s;
+}
+
+.btn:hover::before {
+    width: 160%;
+}
+
+.portrait {
+    aspect-ratio: 3 / 4;
+    border-radius: 190px 190px 26px 26px;
+    background: linear-gradient(
+        145deg,
+        #78755b 0%,
+        #464639 42%,
+        #20211a 75%
+    );
+    position: relative;
+    border: 1px solid rgba(216, 207, 188, .42);
+}
+
+.portrait img {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    left: -7.5%;
+    top: -12%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+    clip-path: inset(0 7% 3% 0);
+    border-radius: 0 0 110px 0;
+}
+
+.portrait::before {
+    content: "";
+    position: absolute;
+    inset: 13px;
+
+    border: 1px solid rgba(255, 251, 244, .22);
+    border-radius: 177px 177px 17px 17px;
+
+    z-index: 2;
+    /* Cut a gap in the top-center */
+    mask:
+        linear-gradient(
+            to right,
+            #000 0%,
+            #000 30%,
+            transparent 30%,
+            transparent 70%,
+            #000 70%,
+            #000 100%
+        );
+
+    -webkit-mask:
+        linear-gradient(
+            to right,
+            #000 0%,
+            #000 30%,
+            transparent 30%,
+            transparent 70%,
+            #000 70%,
+            #000 100%
+        );
+
+    pointer-events: none;
+}

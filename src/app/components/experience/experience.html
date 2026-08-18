@@ -1,0 +1,98 @@
+<section class="section" id="experience">
+    <div class="section-heading">
+        <p class="eyebrow">01 / Career coordinates</p>
+        <h2>Three chapters.<br>One continuing direction.</h2>
+    </div>
+
+    <div class="map-layout">
+
+        <div class="map" aria-label="Career timeline">
+
+            <div class="map-line" aria-hidden="true"></div>
+
+            <!-- QA - Intern -->
+            <button
+                class="map-node"
+                type="button"
+                [class.is-active]="selectedRole === 'intern'"
+                aria-controls="role-detail"
+                (click)="showRole('intern')"
+                (mouseenter)="showRole('intern')"
+            >
+                <span class="node-dot">01</span>
+
+                <span class="node-text">
+                    <strong>Quality Analyst - Intern</strong>
+                    <small>
+                        GrowMofo LTD · Jun–Dec 2021
+                    </small>
+                </span>
+            </button>
+
+            <!-- Developer Trainee -->
+            <button
+                class="map-node"
+                type="button"
+                [class.is-active]="selectedRole === 'trainee'"
+                aria-controls="role-detail"
+                (click)="showRole('trainee')"
+                (mouseenter)="showRole('trainee')"
+            >
+                <span class="node-dot">02</span>
+
+                <span class="node-text">
+                    <strong>Developer Trainee</strong>
+                    <small>
+                        Computer Professionals, Inc. · Nov 2022–Feb 2023
+                    </small>
+                </span>
+            </button>
+
+            <!-- Regular Developer -->
+            <button
+                class="map-node"
+                type="button"
+                [class.is-active]="selectedRole === 'current'"
+                aria-controls="role-detail"
+                (click)="showRole('current')"
+                (mouseenter)="showRole('current')"
+            >
+                <span class="node-dot">03</span>
+
+                <span class="node-text">
+                    <strong>Regular Developer</strong>
+                    <small>
+                        Computer Professionals, Inc. · Feb 2023–Present
+                    </small>
+                </span>
+            </button>
+
+        </div>
+
+        <!-- Dynamic Role Details -->
+        <article
+            class="detail"
+            id="role-detail"
+            aria-live="polite"
+        >
+            <p class="eyebrow">{{ role.label }}</p>
+
+            <h3>{{ role.title }}</h3>
+
+            <p class="period">{{ role.period }}</p>
+
+            <p>{{ role.intro }}</p>
+
+            <ul>
+                @for (item of role.items; track item) {
+                    <li>{{ item }}</li>
+                }
+            </ul>
+
+            <p class="detail-note">
+                {{ role.note }}
+            </p>
+        </article>
+
+    </div>
+</section>

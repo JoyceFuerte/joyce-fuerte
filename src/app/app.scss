@@ -1,0 +1,39 @@
+.page {
+	overflow: hidden;
+	position: relative;
+}
+
+.page::before {
+	content: '';
+	position: fixed;
+	width: 48vw;
+	height: 48vw;
+	max-width: 680px;
+	max-height: 680px;
+	border-radius: 50%;
+	background: rgba(101, 100, 73, 0.18);
+	filter: blur(80px);
+	top: -22vw;
+	right: -18vw;
+	pointer-events: none;
+}
+
+.page::after {
+	content: '';
+	position: fixed;
+	width: 32vw;
+	height: 32vw;
+	border-radius: 50%;
+	background: rgba(216, 207, 188, 0.08);
+	filter: blur(100px);
+	bottom: -18vw;
+	left: -12vw;
+	pointer-events: none;
+}
+
+.container {
+	width: min(1280px, calc(100% - 48px));
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
