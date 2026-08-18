@@ -36,4 +36,8 @@
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
+
+	@media (max-width:520px) {
+        width: min(100% - 32px, 1280px);
+    }
 }

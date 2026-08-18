@@ -5,6 +5,12 @@
     gap: 42px;
     align-items: center;
     padding: 88px 0 70px;
+
+    @media (max-width:820px) {
+        grid-template-columns: 1fr;
+        padding-top: 62px;
+        min-height: auto;
+    }
 }
 
 .hero h1 {
@@ -12,6 +18,10 @@
     font: clamp(54px, 8vw, 118px)/.86 Georgia, serif;
     letter-spacing: -.075em;
     max-width: 850px;
+
+    @media (max-width:520px) {
+        font-size: 58px;
+    }
 }
 
 .hero h1 em {
@@ -89,6 +99,16 @@
     );
     position: relative;
     border: 1px solid rgba(216, 207, 188, .42);
+
+    @media (max-width:820px) {
+        max-width: 350px;
+        width: 70%;
+        justify-self: end;
+    }
+
+    @media (max-width:520px) {
+        width: 82%;
+    }
 }
 
 .portrait img {

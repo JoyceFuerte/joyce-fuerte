@@ -7,4 +7,9 @@ footer {
     font-size: 10px;
     letter-spacing: .1em;
     text-transform: uppercase;
+
+    @media (max-width:520px) {
+        display: block;
+        line-height: 2;
+    }
 }

@@ -1,32 +1,36 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+
+    @media (max-width:520px) {
+        display: none;
+    }
 }
 
 .navbar nav {
-  display: flex;
-  gap: 20px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--bone);
+    display: flex;
+    gap: 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone);
 }
 
 .navbar nav a:hover {
-  color: var(--white);
+    color: var(--white);
 }
 
 .logo {
-  font-family: "Workbench", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BLED" 0,
-    "SCAN" 0;
-  font-size: 22px;
-  letter-spacing: -0.04em;
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+    font-size: 22px;
+    letter-spacing: -0.04em;
 }
