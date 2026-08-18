@@ -28,10 +28,12 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "outputPath": "dist/joyce-fuerte"
           },
           "configurations": {
             "production": {
+              "baseHref": "/joyce-fuerte/",
               "budgets": [
                 {
                   "type": "initial",
